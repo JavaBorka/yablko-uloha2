@@ -38,15 +38,15 @@ document.querySelector(".form form")
         let textInput = document.querySelector("#text")
         let text = textInput.value
 
+        let indexClassName = nadpis.indexOf(" ");
+
         document.querySelector(".form").innerHTML = `
-                <h3>${nadpis}</h3>
-                <p>
-                    ${text}
-                </p>
-            </li>
+            <h3>${nadpis}</h3>
+            <p>
+                ${text}
+            </p>
         `
-    }
-    )
+    })
 
 // 2 c) Upravíme funkciu tak, že bude pracovať s poľom objektov
 
