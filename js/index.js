@@ -6,22 +6,21 @@ console.log("OK")
 
 
 // 2a) Funkcia, ktorá vytvorí card
-
-const ulElm = document.querySelector("ul")
+const cardContainer = document.querySelector(".cards ul")
 
 // const addCard = (nadpis, text) => {
 
-//     let indexClassName = nadpis.indexOf(" ");
+//     let newCard = document.createElement("li")
 
-//     ulElm.innerHTML += `
-//         <li class="${nadpis.toLowerCase().slice(0,indexClassName)}">
-//             <h3>${nadpis}</h3>
+//     newCard.innerHTML = `
+//         <h3>${nadpis}</h3>
+//         <p>
+//             ${text}
+//         </p>
 
-//             <p>
-//                 ${text}
-//             </p>
-//         </li>
 //     `
+
+//     cardContainer.appendChild(newCard)
 // }
 
 // addCard("Super nadpis" , "Toto je veľmi krátky a veľmi nudný text")
@@ -52,17 +51,18 @@ document.querySelector(".form form")
 
 const addCard = (nadpis, text) => {
 
-    let indexClassName = nadpis.indexOf(" ");
+    let newCard = document.createElement("li")
+    newCard.classList.add("animate__animated", "animate__bounce", "animate__slow")
 
-    ulElm.innerHTML += `
-        <li class="${nadpis.toLowerCase().slice(0,indexClassName)} animate__animated animate__bounce animate__slow">
-            <h3>${nadpis}</h3>
+    newCard.innerHTML = `
+        <h3>${nadpis}</h3>
+        <p>
+            ${text}
+        </p>
 
-            <p>
-                ${text}
-            </p>
-        </li>
     `
+
+    cardContainer.appendChild(newCard)
 }
 
 let cards = [
